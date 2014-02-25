@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--<link href="css/bootstrap.css" rel="stylesheet">-->
+		<link href="css/jquery.loadingbox.css" rel="stylesheet">
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="src/jquery.loadingbox.min.js"></script>
+		
+		<style type="text/css">
+		html, body {
+			margin: 0;
+			padding: 0;
+		}
+
+		#lipsum {
+			width: 960px;
+			margin: auto;
+		}
+
+		#cat {
+			display: inline-block;
+		}
+
+		p {
+
+		}
+		</style>
+
+		<script type="text/javascript">
+		$(function(){
+			$(document.body).on('click', '#loading-on-cat', function(event){
+				var imgEl = $('#cat').loadingBox({message: '.... Nyan cat ...'});
+
+				// only for example
+				imgEl.click(function(){
+					imgEl.loadingBox('destroy');
+				});
+			});
+
+			$(document.body).on('click', '#loading-on-text', function(event){
+				var textEl = $('#lipsum-text').loadingBox();
+
+				// only for example
+				textEl.click(function(){
+					textEl.loadingBox('destroy');
+				});
+			});
+
+			$(document.body).on('click', '#loading-fullscreen', function(event){
+				  var fullscreenEl = $(document.body).loadingBox();
+
+				  // only for example
+				  fullscreenEl.click(function(){
+				  		fullscreenEl.loadingBox('destroy');
+				  });
+			});
+
+		});
+		</script>
+	</head>
+	<body>
+		<div id="lipsum">
+			<div id="cat">
+				<img src="imgs/nyancat.png">
+			</div>
+			<br/>
+			<button id="loading-on-cat">Create loading on cat</button> <button id="loading-on-text">Create loading on text</button> <button id="loading-fullscreen">Create fullscreen loading</button><br/><br/>
+
+			<div id="lipsum-text">
+				<p>
+				Fusce et dignissim erat, ac pulvinar eros. Phasellus non dui tincidunt lorem accumsan ornare. Vivamus vel egestas orci. Sed vel arcu arcu. In lobortis quam commodo purus venenatis molestie. Nam interdum vel magna eu sagittis. Praesent sit amet est vel urna varius ultrices. Donec posuere aliquam magna at auctor. Nunc vitae elit eu metus adipiscing egestas nec quis libero. Nulla euismod nisl id euismod interdum. Pellentesque a mi justo. Suspendisse quam mi, congue sed mollis in, faucibus ut nibh. Curabitur rhoncus quam at fringilla cursus. Etiam at velit sodales magna consequat sollicitudin.
+				</p>
+				<p>
+				Mauris elementum pellentesque odio, non vulputate justo vulputate et. Maecenas fringilla rutrum bibendum. Cras eu lacus non elit aliquet tincidunt. Quisque eget arcu ullamcorper, tempus mauris id, dignissim sapien. Nam adipiscing massa nulla, eu dapibus lorem viverra ac. Morbi quis justo molestie, interdum dolor nec, facilisis mi. Donec sagittis nulla vel cursus pharetra. Duis posuere cursus vehicula. Integer luctus dolor nulla, in porta odio laoreet nec. Vivamus sodales purus at convallis rutrum. Aliquam tincidunt lectus id bibendum dictum. Cras eget lorem sed ligula placerat fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec varius mi blandit, rhoncus sem non, tempus leo. Proin eu ligula tempus, pellentesque risus ut, cursus lectus.
+				</p>
+				<p>
+				Sed ut lectus orci. Sed eu eros posuere justo accumsan malesuada at et arcu. Ut ullamcorper fringilla tortor vulputate lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus porttitor nunc diam, vel facilisis turpis vulputate eget. Morbi vestibulum, odio eu varius congue, metus felis dictum odio, a mattis turpis dolor sed justo. Nullam consectetur, diam blandit venenatis mollis, augue sapien vestibulum sem, at mollis eros enim vel risus. Nulla fermentum lectus rhoncus, porta massa ut, posuere ligula. Pellentesque nec augue condimentum, porta nisl id, gravida mi. Pellentesque imperdiet lobortis justo et posuere.
+				</p>
+				<p>
+				Nunc in nisi vitae sem placerat tincidunt eu et neque. Duis venenatis mattis tincidunt. Nam vulputate hendrerit leo, at cursus augue elementum non. Nullam feugiat at arcu sit amet pulvinar. Donec eleifend imperdiet feugiat. Cras posuere tristique lacus quis congue. Vivamus vel sollicitudin dui. In hac habitasse platea dictumst.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
